@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+		<div class="generic-container" >
+	       <div class="panel panel-default">
+	            <div class="panel-heading"><span class="lead">Add a new Employee</span></div>
+	            <div class="formcontainer" >
+	            	<form name="addEmployee">
+	            	
+	            		<div class="row" ng-if="empCtrl.newEmployee.id != undefined ">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">ID</label>
+                              <div class="col-md-7" >
+                                  <input type="text" ng-model="empCtrl.newEmployee.id" ng-disabled="true" />
+                              </div>
+	                       </div>
+	                    </div>
+                        
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">NAME</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.newEmployee.name"  required/>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">DESIGNATION</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.newEmployee.designation" required />
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">SALARY</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.newEmployee.salary" required />
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12" >
+                              <h3><span class="label label-info">Employee Address</span></h3>
+                           </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">DOOR NO</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.newEmployee.address.doorNo" required />
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">STREET</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.newEmployee.address.street" required />
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">LOCATION</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.newEmployee.address.location" required />
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">CITY</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.newEmployee.address.city" required />
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                   		<div class="form-group col-md-12" ng-if="empCtrl.updateForm == false">
+                    		 <button type="button" ng-click="empCtrl.saveEmployee()" class=".btn-md btn-success">SAVE</button>
+                   		</div>
+                   		
+                   		<div class="form-group col-md-12" ng-if="empCtrl.updateForm == true">
+                    		 <button type="button" ng-click="empCtrl.saveEmployee()" class=".btn-md btn-primary">UPDATE</button>
+                   		</div>
+                   		
+                   		
+                      </div>
+                      
+ 					  <div ng-if="empCtrl.savemessage !== ''" class="alert alert-success">
+					    	{{empCtrl.message}}
+					  </div>
+                      
+	            	</form>
+	            </div>
+	       </div>
+	     </div>
+	</body>
+</html>

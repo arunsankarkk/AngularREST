@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+		<div class="generic-container" >
+	       <div class="panel panel-default">
+	            <div class="panel-heading"><span class="lead">Employee Details</span></div>
+	            <div class="formcontainer" >
+	            	<form name="EmployeeDetails">
+	            	
+	            		<div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">ID</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="empCtrl.retrievedEmployee.id" ng-disabled="true"/>
+                              </div>
+	                       </div>
+	                    </div>
+                        
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">NAME</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.retrievedEmployee.name" ng-disabled="true"/>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">DESIGNATION</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.retrievedEmployee.designation" ng-disabled="true"/>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">SALARY</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.retrievedEmployee.salary" ng-disabled="true"/>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <h3><span class="label label-info">Employee Address</span></h3>
+                           </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">DOOR NO</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.retrievedEmployee.address.doorNo" ng-disabled="true"/>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">STREET</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.retrievedEmployee.address.street" ng-disabled="true"/>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">LOCATION</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.retrievedEmployee.address.location" ng-disabled="true"/>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="file">CITY</label>
+                              <div class="col-md-7">
+                                   <input type="text" ng-model="empCtrl.retrievedEmployee.address.street" ng-disabled="true"/>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                      	<div class="form-group col-md-12" ng-if="empCtrl.updateForm == false && empCtrl.deleteForm == true">
+                    		 <button type="button" ng-click="empCtrl.deleteEmployee()" class=".btn-md btn-danger">DELETE</button>
+                   		</div>
+                      </div>
+	            	</form>
+	            </div>
+	       </div>
+	     </div>
+	</body>
+</html>

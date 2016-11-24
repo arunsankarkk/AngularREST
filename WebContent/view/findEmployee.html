@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<div ng-if="empCtrl.empToUpdate === false && empCtrl.empToDelete === false">
+	 
+		<input type="text" ng-model="empCtrl.searchEmployee" >
+		<div class="row">
+           <div class="form-group col-md-12">
+				<button ng-click="empCtrl.getEmployeeDetail()" class=".btn-md btn-info">Find an Employee</button>
+			</div>
+		</div>
+	</div>
+	
+	<div ng-if="empCtrl.empToUpdate === true && empCtrl.empToDelete === false">
+		<input type="text" ng-model="empCtrl.searchEmployeeToUpdate"> Enter an Employee Id to Update 
+		<div class="row">
+           <div class="form-group col-md-12">
+				<button ng-click="empCtrl.getEmployeeToUpdate()" class=".btn-md btn-info">Employee ID to Update</button>
+			</div>
+		</div>
+	</div>
+	
+	<div ng-if="empCtrl.empToUpdate === false && empCtrl.empToDelete === true">
+		<input type="text" ng-model="empCtrl.searchEmployee"> Enter an Employee Id to Delete 
+		<div class="row">
+           <div class="form-group col-md-12">
+				<button ng-click="empCtrl.getEmployeeDetail()" class=".btn-md btn-info"> Employee Id to Delete</button>
+			</div>
+		</div>
+	</div>
+	
+	<div ng-if="empCtrl.message !== ''" class="alert alert-success">
+    	{{empCtrl.message}}
+    </div>
+</body>
+</html>

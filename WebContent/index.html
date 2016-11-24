@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>EMPLOYEE RECORDS</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" rel="stylesheet" >
+</head>
+
+<body ng-app="app" ng-controller="employeeController as empCtrl">
+	<h1> Employee Database</h1>
+	<h3> Perform below mention operations</h3>
+	<div >
+		
+		<ul>
+			<li> <a href="" ng-click="empCtrl.findEmployee()"> GET EMPLOYEE DETAILS</a></li>
+			<li> <a href="" ng-click="empCtrl.getAllEmployees()"> GET ALL EMPLOYEES</a></li>
+			<li> <a href="" ng-click="empCtrl.addEmployee()"> ADD AN EMPLOYEE</a></li>
+			<li> <a href="" ng-click="empCtrl.findEmployeeToUpdate()"> UPDATE AN EMPLOYEE</a></li>
+			<li> <a href="" ng-click="empCtrl.findEmployeeToDelete()"> REMOVE AN EMPLOYEE</a></li>
+			<li> <a href="" ng-click="empCtrl.addMultipleEmployee())"> ADD MULTIPLE EMPLOYEES</a></li>
+		</ul>
+	</div>
+	
+	<div class="contentpanel" id="contentpanel">
+			<div ui-view="main"></div>
+	</div>
+
+ 	<script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+     <script src="js/controller/EmployeeController.js"></script>
+     <script src="js/service/employee_service.js"></script>
+     <script src="js/service/http_service.js"></script>
+</body>
+</html>
